@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hotels Defects</title>
+    <link rel="stylesheet" href="style/style.css">
+    <script src="https://kit.fontawesome.com/69061d5a94.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    
+    <div class="tab">
+    <div class="profile">
+        <div class="user-photo"></div>
+        <h2 class="user-login"></h2>
+        <p class="user-role"></p>
+    </div>
+      <button class="tablinks" onclick="openSection(event, 'Main')" id="defaultOpen">
+        <i class="fa-solid fa-house"></i>
+        Головна
+    </button>
+      <button class="tablinks" onclick="openSection(event, 'Admins')">
+        <i class="fa-solid fa-users-gear"></i>
+        Адміни
+    </button>
+      <button class="tablinks" onclick="openSection(event, 'Users')">
+        <i class="fa-solid fa-user-group"></i>
+        Користувачі
+    </button>
+      <button class="tablinks" onclick="openSection(event, 'Defects')"  >
+        <i class="fa-solid fa-triangle-exclamation"></i>
+        Дефекти
+    </button>
+    </div>
+    
+    <div id="Main" class="tabcontent">
+      <h1 class="text-welcome">Вітаємо в інформаційній системі простежування дефектів в готелях!</h1>
+      <div class="telegram-link bounce"><a href="https://t.me/defect_system_bot" target="_blank">Телеграм-бот <i class="fa-solid fa-arrow-right"></i></a></div>
+    </div>
+    
+    <div id="Admins" class="tabcontent">
+      <div class="users-top">
+        <h2><i class="fa-solid fa-users-gear"></i>Список Адмінів</h2>
+      </div>
+      <div class="admin-table">
+        <table id="admins-table">
+          <thead>
+              <tr>
+                  <th>№</th>
+                  <th>Ім'я</th>
+                  <th>Прізвище</th>
+                  <th>Посада</th>
+                  <th>Доступ</th>
+                  <th>Операції</th>
+              </tr>
+          </thead>
+          <tbody id="category-list"></tbody>
+      </table>
+      </div>
+    </div>
+    
+    <div id="Users" class="tabcontent">
+      <div class="users-top">
+        <h2><i class="fa-solid fa-user-group"></i>Список Користувачів</h2>
+      </div>
+      <div class="users-table">
+        <table id="category-table">
+          <thead>
+              <tr>
+                  <th>№</th>
+                  <th>Ім'я</th>
+                  <th>Прізвище</th>
+                  <th>Посада</th>
+                  <th>Доступ</th>
+                  <th>Операції</th>
+              </tr>
+          </thead>
+          <tbody id="category-list"></tbody>
+      </table>
+      </div>
+    </div>
+
+    <div id="Defects" class="tabcontent">
+      <div class="users-top">
+        <h2><i class="fa-solid fa-triangle-exclamation"></i>Список Дефектів</h2>
+      </div>
+      <div class="users-table">
+        <table id="defect-table">
+          <thead>
+              <tr>
+                  <th>Працівник</th>
+                  <th>Номер</th>
+                  <th>Опис</th>
+                  <th>Фото</th>
+                  <th>Операції</th>
+              </tr>
+          </thead>
+          <tbody id="defect-list"></tbody>
+      </table>
+    </div>
+
+    <script src="scripts/script.js"></script>
+    <script src="scripts/queries.js"></script>
+</body>
+</html>

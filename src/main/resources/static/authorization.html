@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WELCOME</title>
+    <link rel="stylesheet" href="style/style.css">
+</head>
+<body>
+    <h1 class="welcome-text">Hotel Defect Control System</h1>
+    <div class="container">
+        <div class="card">
+            <div class="card-header">
+                <h3>Вітаємо В Системі Контролю Дефектів!</h3>
+            </div>
+            <div class="card-body">
+                <div class="btn-group" role="group">
+                    <button type="button" class="btn btn-primary active" onclick="showLogin()">Вхід</button>
+                    <button type="button" class="btn btn-primary" onclick="showRegistration()">Реєстрація</button>
+                </div>
+    
+                <div id="loginForm">
+                    <form>
+                        <div class="form-group">
+                            <label for="loginUsername">Логін:</label>
+                            <input type="text" id="loginUsername" name="loginUsername" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="loginPassword">Пароль:</label>
+                            <input type="password" id="loginPassword" name="loginPassword" required>
+                        </div>
+                        <input type="submit" value="Увійти" class="btn btn-primary">
+                    </form>
+                </div>
+    
+                <div id="registrationForm" style="display: none;">
+                    <form enctype="multipart/form-data">
+                        <div class="form-group">
+                            <label for="firstName">Ім'я:</label>
+                            <input type="text" id="firstName" name="firstName" required>
+                        </div>
+                        <div class="form-group">
+                          <label for="lastName">Прізвище:</label>
+                          <input type="text" id="lastName" name="lastName" required>
+                      </div>
+                      <div class="form-group">
+                        <label for="loginUsername">Логін:</label>
+                        <input type="text" id="Username" name="Username" required>
+                    </div>
+                        <div class="form-group">
+                            <label for="password">Пароль:</label>
+                            <input type="password" id="password" name="password" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="photo">Фотографія:</label>
+                            <input class="form-input" type="file" id="photo" name="photo" accept=".jpg, .jpeg, .png"><br>
+                        </div>
+                        <input type="submit" value="Зареєструватися" class="btn btn-primary" onclick="showLogin()">
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        function showLogin() {
+            document.getElementById('loginForm').style.display = 'block';
+            document.getElementById('registrationForm').style.display = 'none';
+        }
+    
+        function showRegistration() {
+            document.getElementById('loginForm').style.display = 'none';
+            document.getElementById('registrationForm').style.display = 'block';
+        }
+        </script>
+    <script src="scripts/queries.js"></script>
+</body>
+</html>

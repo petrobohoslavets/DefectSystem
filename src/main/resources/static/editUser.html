@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit User</title>
+    <script src="scripts/editUser.js"></script>
+    <script src="scripts/queries.js"></script>
+    <style>
+        body {
+  font-family: Arial, sans-serif;
+  margin: 20px;
+}
+
+h2 {
+  color: #333;
+  text-align: center;
+  margin-top: 70px;
+}
+
+#editUserForm {
+  max-width: 400px;
+  margin: 20px 0;
+}
+
+label {
+  display: block;
+  margin-bottom: 8px;
+  color: #555;
+  text-align: left;
+}
+
+input[type="text"] {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 12px;
+  box-sizing: border-box;
+  
+  font-size: 16px;
+}
+
+button {
+  background-color: #4caf50;
+  color: white;
+  padding: 12px 15px 11px 15px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-top: 10px;
+  font-size: 16px;
+}
+
+button:hover {
+  background-color: #45a049;
+}
+.btn-cancel {
+  text-decoration: none;
+  color: grey;
+  margin-left: 10px;
+  margin-top: 2px;
+  border: 1px solid #45a049;
+  padding: 10px 15px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px
+}
+form {
+  margin: 0 auto;
+  border: 1px solid #555;
+  padding: 40px;
+  border-radius: 10px;
+  text-align: center;
+}
+.wrap {
+  display: flex;
+  justify-content: center;
+ 
+}
+    </style>
+</head>
+<body>
+  <h2>Редагувати користувача</h2>
+  <div class="wrap">
+    
+    <form id="editUserForm">
+        <label for="userId">User ID:</label>
+        <input type="text" id="userId" name="userId" readonly>
+        
+        <label for="firstName">First Name:</label>
+        <input type="text" id="firstName" name="firstName">
+        
+        <label for="lastName">Last Name:</label>
+        <input type="text" id="lastName" name="lastName">
+        
+        <label for="permission">Permission:</label>
+        <input type="text" id="permission" name="permission">
+        
+        <button type="button" onclick="saveChanges()">Зберегти зміни</button>
+        <a href="index.html" class="btn-cancel">Скасувати</a>
+    </form>
+  </div>
+    
+</body>
+</html>
